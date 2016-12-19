@@ -1,19 +1,38 @@
-# TodoMVC App Template
+# Nomplate • [TodoMVC](http://todomvc.com)
 
-> Template used for creating [TodoMVC](http://todomvc.com) apps
+> Nomplate is a microscopic (< 5kb), insanely fast template engine and component system that makes it dead simple to create, compose, test and deliver visual components using Plain Old JavaScript on the server and/or in the client.
 
-![](https://github.com/tastejs/todomvc-app-css/raw/master/screenshot.png)
+## Resources
 
+- [https://github.com/lukebayes/nomplate](Nomplate Website)
+- [Documentation]()
+- [Used by]()
+- [Blog]()
+- [FAQ]()
 
-## Getting started
+### Articles
 
-- Read the [Application Specification](https://github.com/tastejs/todomvc/blob/master/app-spec.md) before touching the template.
+- [Interesting article]()
 
-- Delete this file and rename `app-readme.md` to `readme.md` and fill it out.
+### Support
 
-- Clone this repo and install the dependencies with [npm](https://npmjs.com) by running: `npm install`.
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/nomplate)
+- [Google Groups]()
+- [Twitter](http://twitter.com/__)
+- [Google+]()
 
+## Implementation
 
-## License
+If you don't already have Node and NPM in your PATH run, `make dev-install && source setup-env.sh`
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dct:type">work</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://sindresorhus.com" property="cc:attributionName" rel="cc:attributionURL">TasteJS</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>.
+To build the HTML document and JavaScript bundle run, `make build` and then, using a browser open `dist/index.html`.
+
+If you'd like to build the minified versions HTML and JavaScript run, `NODE_ENV=production make build`.
+
+To run the unit tests, `make test`.
+
+To watch all files and run tests when a file changes, `make test-w` (note no space before "-w").
+
+## Credit
+
+Created by [lukebayes](http://lukebayes.com)

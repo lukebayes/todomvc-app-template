@@ -1,8 +1,8 @@
-lib
 node_modules
-vendor
+lib
 bin
 log
 data
 tmp
 dist
+client-bundle.js
