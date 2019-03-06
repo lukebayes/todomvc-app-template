@@ -17,9 +17,10 @@ function footer(allTasks, currentSection, onClearCompleted) {
 
   if (allTasks.length > 0) {
     const remainingTasks = allTasks.filter(task => !task.isComplete);
+    const word = remainingTasks.length == 1 ? 'item' : 'items';
 
     return dom.footer({className: 'footer'}, () => {
-      dom.span({className: 'todo-count'}, `${remainingTasks.length} items left`);
+      dom.span({className: 'todo-count'}, `${remainingTasks.length} ${word} left`);
       dom.ul({className: 'filters'}, () => {
         renderFooterLink('#/', 'All', currentSection !== 'active' && currentSection !== 'completed');
         renderFooterLink('#/active', 'Active', currentSection === 'active');

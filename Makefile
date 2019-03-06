@@ -5,7 +5,7 @@ ARCH=x64
 PROJECT_ROOT=$(shell git rev-parse --show-toplevel)
 
 # Nodejs
-NODE_VERSION=7.2.0
+NODE_VERSION=10.15.3
 NODE=$(PROJECT_ROOT)/lib/nodejs/bin/node
 NPM=$(PROJECT_ROOT)/lib/nodejs/bin/npm
 
@@ -54,10 +54,10 @@ dist/static/index.css: dist/static js/*
 	cp node_modules/todomvc-app-css/index.css dist/static/index.css
 
 dist/static/todomvc.js: dist/static js/*
-	$(WEBPACK) --config $(WEBPACK_CLIENT_CONFIG) client.js dist/static/todomvc.js
+	$(WEBPACK) --mode development --config $(WEBPACK_CLIENT_CONFIG) client.js -o dist/static/todomvc.js
 
 dist/static/todomvc.min.js: dist/static js/*
-	$(WEBPACK) --optimize-minimize --config $(WEBPACK_CLIENT_CONFIG) client.js dist/static/todomvc.min.js
+	$(WEBPACK) --mode production --optimize-minimize --config $(WEBPACK_CLIENT_CONFIG) client.js -o dist/static/todomvc.min.js
 
 dist/static/todomvc.min.gz: dist/static/todomvc.min.js
 	gzip --best -c dist/static/todomvc.min.js > dist/static/todomvc.min.gz

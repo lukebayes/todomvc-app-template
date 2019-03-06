@@ -13,10 +13,11 @@ function taskItem(task, onTaskChanged, onDestroyTask) {
   const elementId = `t-${task.id}`;
   const classNames = {
     completed: task.isComplete,
+
     editing: task.isEditing,
   };
 
-  return dom.li({id: elementId, className: classNames}, () => {
+  return dom.li({id: elementId, key:elementId, className: classNames}, () => {
     let inputElement;
 
     function onInputRendered(element) {
